@@ -2,7 +2,9 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
 import 'package:flutter/rendering.dart';
+import 'package:lnf_app/menu/home.dart';
 import 'package:lnf_app/register.dart';
+import 'package:lnf_app/menu/page/beranda.dart';
 
 class Login extends StatelessWidget {
   @override
@@ -128,7 +130,10 @@ class Login extends StatelessWidget {
                       child: FlatButton(
                         color: Theme.of(context).primaryColor,
                         textColor: Colors.white,
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.push(context,
+                              MaterialPageRoute(builder: (context) => Home()));
+                        },
                         shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(18)),
                         child: Text(
